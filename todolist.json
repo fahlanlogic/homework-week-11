@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Beli hadiah ulang tahun",
+    "description": "Beli kado untuk teman yang ulang tahun besok."
+  },
+  {
+    "name": "Buat presentasi proyek",
+    "description": "Menyiapkan slide presentasi untuk rapat minggu depan."
+  },
+  {
+    "name": "Olahraga pagi",
+    "description": "Lari selama 30 menit di taman sebelah."
+  },
+  {
+    "name": "Baca buku",
+    "description": "Baca 2 bab terakhir dari novel terbaru."
+  },
+  {
+    "name": "Rapat tim",
+    "description": "Pembahasan strategi untuk proyek besar."
+  },
+  {
+    "name": "Bersihkan rumah",
+    "description": "Vacuum dan mop lantai, bersihkan kamar mandi."
+  },
+  {
+    "name": "Pesan makan malam",
+    "description": "Pesan makanan favorit dari restoran terdekat."
+  },
+  {
+    "name": "Pelajari bahasa pemrograman baru",
+    "description": "Mulai belajar JavaScript dari tutorial online."
+  },
+  {
+    "name": "Tonton film",
+    "description": "Nonton film terbaru di bioskop malam ini."
+  },
+  {
+    "name": "Buat rencana perjalanan",
+    "description": "Rencanakan liburan ke pantai bersama keluarga."
+  },
+  {
+    "name": "Cek kondisi kendaraan",
+    "description": "Service mobil dan periksa kondisi ban."
+  },
+  {
+    "name": "Kirim dokumen penting",
+    "description": "Kirim dokumen kontrak ke klien melalui email."
+  },
+  {
+    "name": "Pangkas rambut",
+    "description": "Potong rambut di salon terdekat."
+  },
+  {
+    "name": "Update aplikasi",
+    "description": "Perbarui aplikasi ponsel ke versi terbaru."
+  },
+  {
+    "name": "Buat playlist musik",
+    "description": "Buat playlist untuk perjalanan di mobil."
+  }
+]
