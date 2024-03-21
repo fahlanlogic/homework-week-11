@@ -24,7 +24,7 @@ class TodoList {
   static create = async (req, res, next) => {
     try {
       const todo = await TodoListServ.create(req.body);
-      res.status(201).json({ message: 'Todo created successfully', todo: req.body });
+      res.status(201).json({ message: "Todo created successfully", todo });
     } catch (error) {
       next(error);
     }

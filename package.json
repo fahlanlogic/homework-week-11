@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js",
-    "lint": "eslint ./"
+    "test": "jest --detectOpenHandles --silent",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
