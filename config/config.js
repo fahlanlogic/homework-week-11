@@ -5,8 +5,8 @@ const config = {
   development: {
     username: process.env.POSTGRES_USERNAME,
     password: process.env.POSTGRES_PASSWORD,
-    database: process.env.POSTGRES_NAME,
-    host: "localhost",
+    database: process.env.POSTGRES_DB,
+    host: process.env.POSTGRES_HOST,
     dialect: "postgres",
     dialectModule: pg,
   },
@@ -17,6 +17,14 @@ const config = {
     host: "localhost",
     dialect: "postgres",
     dialectModule: pg,
+  },
+  docker: {
+    username: process.env.POSTGRES_USERNAME,
+    password: process.env.POSTGRES_PASSWORD,
+    database: process.env.POSTGRES_DB,
+    host: process.env.POSTGRES_HOST,
+    dialect: "postgres",
+    ports: 5439,
   },
 };
 

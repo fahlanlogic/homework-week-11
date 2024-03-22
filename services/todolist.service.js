@@ -28,12 +28,11 @@ class TodoListServ {
       const findTitle = await TodoList.findAll({
         where: { title },
       });
-      
-      if (!title || !description) throw { code: 400 };
+
       if (findTitle.length > 0) throw { code: 409 };
 
       const todo = await TodoListRepos.create({ title, description });
-      
+
       return todo;
     } catch (error) {
       throw error;
@@ -50,7 +49,6 @@ class TodoListServ {
 
       if (!isTodoExist) throw { code: 404 };
       if (findTitle.length > 0) throw { code: 409 };
-      if (!title || !description) throw { code: 400 };
 
       await TodoListRepos.update(id, body);
     } catch (error) {
@@ -61,7 +59,9 @@ class TodoListServ {
   static destroy = async (id) => {
     try {
       const isTodoExist = await TodoListRepos.findOne(id);
+
       if (!isTodoExist) throw { code: 404 };
+
       await TodoListRepos.destroy(id);
     } catch (error) {
       throw error;
