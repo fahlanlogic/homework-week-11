@@ -51,6 +51,7 @@ jobs:
     - name: run unit testing
       run: npm run docker-test
       env:
+        # ENVIRONMENT VARIABLE TESTING GITHUB ACTION
         POSTGRES_USERNAME: "postgres"
         POSTGRES_PASSWORD: "postgres"
         POSTGRES_TEST: "todotest-db"

@@ -1,10 +1,14 @@
 version: '3'
 
+# NETWORKS DIBANGUN UNTUK MENGHUBUNGKAN TIAP CONTAINER
 networks:
   app-tier:
     driver: bridge
 
+# SERVICES KUMPULAN CONTAINER
 services:
+
+  # SERVICE POSTGRES
   postgres:
     image: postgres:alpine3.19
     networks:
@@ -13,20 +17,27 @@ services:
     env_file:
       - ./.env
     ports:
+      # CONTAINER:LOCALHOST
       - 5430:5432
+    # VOLUMES SAMA SEPERTI CACHE
     volumes:
       - pg_data:/var/lib/postgresql/data 
   
+  # SERVICE APPLIKASI SAAT INI
   app:
+    # APLIKASI BERGANTUNG PADA SERVICE POSTGRES
     depends_on:
       - postgres
+    # MEMBANGUN SELURUH FILE
     build: .
     networks:
       - app-tier
     restart: always
     env_file: ./.env
     ports:
+      # CONTAINER:LOCALHOST
       - 8000:8000
 
+# VOLUME TEMPAT AGAR DATA TIDAK HILANG
 volumes:
   pg_data:
