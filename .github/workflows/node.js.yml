@@ -48,11 +48,11 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
-    - name: unit testing
+    - name: run unit testing
       run: npm run docker-test
       env:
         POSTGRES_USERNAME: "postgres"
         POSTGRES_PASSWORD: "postgres"
-        POSTGRES_TEST: todotest-db
-        POSTGRES_HOST: postgres
+        POSTGRES_TEST: "todotest-db"
+        POSTGRES_HOST: "localhost"
         PORT: 5432
