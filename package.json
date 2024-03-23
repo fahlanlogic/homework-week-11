@@ -7,7 +7,7 @@
     "test": "jest --detectOpenHandles --silent --forceExit --noStackTrace --verbose --watchAll --maxWorkers=1",
     "dev": "nodemon ./bin/server.js",
     "docker": "node ./bin/server.js",
-    "docker-test": "npx sequelize-cli db:create --env docker_test && npx sequelize-cli db:migrate --env docker_test && jest --detectOpenHandles --silent --forceExit --noStackTrace --verbose --watchAll --maxWorkers=1"
+    "docker-test": "npx sequelize-cli db:create --env test && npx sequelize-cli db:migrate --env test && jest --detectOpenHandles --silent --forceExit --noStackTrace --verbose --watchAll --maxWorkers=1"
   },
   "keywords": [],
   "author": "",
