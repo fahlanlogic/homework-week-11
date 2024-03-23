@@ -48,8 +48,8 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
-    - name: run unit testing
-      run: npm run docker-test
+    - name: Run unit testing
+      run: npm run ci-test
       env:
         # ENVIRONMENT VARIABLE TESTING GITHUB ACTION
         POSTGRES_USERNAME: "postgres"
