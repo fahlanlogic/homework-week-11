@@ -21,7 +21,12 @@ Untuk menjalankan dalam linkungan container, kamu tidak perlu lagi mengedit `con
 
 ### Langkah program hit API di container
 - Jalankan perintah `docker compose up` untuk membangun sekaligus menjalankan seluruh container yang terdapat di file `docker-compose.yaml`
-- Lalu kamu bisa langsung jalankan API di port `8000`
+- Kamu tidak bisa menembak API karena database belum tersedia, untuk itu kamu perlu masuk ke terminal container dengan membuat terminal baru dan jalankan perintah `docker ps` untuk melihat container yang berjalan, lalu copy id-nya
+- Lalu `docker exec -it <id_container> sh` untuk masuk ke container
+- Jika sudah masuk jalankan perintah `npx sequelize-cli db:create --env docker` untuk membuat database
+- Jalankan perintah `npx sequelize-cli db:migrate` untuk melakukan migrasi
+- Dan terakhir `npx sequelize-cli db:seed:all` untuk meng-insert data ke dalam table
+- Baru kamu bisa langsung jalankan API di port `8000` dan melakukan permintaan API
 
 ### Langkah program unit test di container
 Untuk menjalankan unit test di dalam container kamu perlu lakukan beberapa langkah berikut:
